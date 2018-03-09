@@ -16,9 +16,18 @@ $("submit").click(function(){
 
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=salsa&api_key=Semo8rtzISD2onGdZY0FO4MlSkdvTGz7";
 
+//get 5 images from API
 var api = "https://api.giphy.com/v1/gifs/search";
 var apiKey = "Semo8rtzISD2onGdZY0FO4MlSkdvTGz7";
-var qty = "KEY&limit=5";
+var qty = "&limit=5";
+
+$("button").on("click", function(){
+    findValue =$(this).val();
+    console.log(findValue);
+    queryURL = api+"?q="+findValue+apiKey+qty;
+    console.log(queryURL);
+});
+
 // when a user clicks on image it moves, then it stops if clicked on again
 // then it allows for user to create a button 
 // when the button is clicked it populates images 
