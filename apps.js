@@ -21,7 +21,8 @@ var api = "https://api.giphy.com/v1/gifs/search";
 var apiKey = "&api_key=Semo8rtzISD2onGdZY0FO4MlSkdvTGz7";
 var qty = "&limit=5";
 
-$("button").on("click", function(){
+//button listener
+$("button").on("click", function() {
     findValue =$(this).val();
     console.log(findValue);
     queryURL = api+"?q="+findValue+apiKey+qty   
@@ -30,20 +31,26 @@ $("button").on("click", function(){
 $.ajax({
     url: queryURL,
     method: "GET"
- }).then(function(response){
-     console.log(queryURL);
+ })
+ 
+ .then(function(response){
+     console.log(response);
 
-     var findings=response.data;
-     console.log(findings);
+   
+
+// console.log(findings);
+
+// var findings=response.data.image_original_url;
+// var danceImage =$("<img>");
 
 // loop through array 
 for (var i=0;i<findings.length; i++){
     var imageContent =$("<div class='col-md-4'>");
     var rating = findings[i].rating;
-}
- }
-
-)
+    var movingImage = findings[i].images;
+    var seeImage =$("<img>");
+// 
+ });
 
 });
 
