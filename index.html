@@ -1,0 +1,60 @@
+<!-- Loop through a preset array and append to a div that contains everything 
+
+either use a form OR create an input and a button 
+
+if I use form i have to use "preventdefault"
+
+Build the button that has an event listener  (sends an AJAX request) and get objects that will be later
+on shown on the page --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giphy</title>
+</head>
+<body>
+
+<!-- create buttons using jquery and append to button holder div tag--> 
+<div id="button-holder">
+    <button id="salsa"></button>
+    <button id="cumbia"></button>
+    <button id="merengue"></button>
+    <button id="bachata"></button>
+    <button id="kizomba"></button>
+    
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="apps.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+
+toggle through still and animated images 
+
+when user inputs something it creates a new button 
+
+then once button is clicked the results relevant to that button are shown 
+
+Challenges 
+
+- EASY VERSION 
+
+You have a div holding information in HTML
+    -placeholders for history where buttons clicked will show and for results (Object Parent) 
+
+- ARRAY OF objects
+
+Create a new array and to display I have to loop through them, using their index, then I will pass creating a new button
+for each element value and text 
+
+When I create a button I have to push the button to the array (this is neater)
+
+THEN 
+    - create a new button from that click event listener 
+     -->
